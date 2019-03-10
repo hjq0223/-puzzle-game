@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="score_title">
+        <item>玩家名称</item>
+        <item>难度</item>
+        <item>类型</item>
+        <item>步数</item>
+        <item>时间</item>
+    </array>
+</resources>

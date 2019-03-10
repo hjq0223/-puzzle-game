@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:background="@color/colorGrayBig"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/v_margin"
+        android:layout_marginTop="@dimen/v_margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="难度"
+            android:textColor="@color/colorWhite" />
+
+        <SeekBar
+            android:id="@+id/sb_level"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:max="7"
+            android:progressDrawable="@drawable/sb_bg" />
+
+        <TextView
+            android:id="@+id/tv_level"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="3"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/v_margin"
+        android:layout_marginTop="@dimen/v_margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拼图类型"
+            android:textColor="@color/colorWhite" />
+
+        <RadioGroup
+            android:id="@+id/rg_puzzle_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <RadioButton
+                android:id="@+id/rb_type_image"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="图片"
+                android:textColor="@color/colorWhite" />
+
+            <RadioButton
+                android:id="@+id/rb_type_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="数字"
+                android:textColor="@color/colorWhite" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/v_margin"
+        android:layout_marginTop="@dimen/v_margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="游戏模式"
+            android:textColor="@color/colorWhite" />
+
+        <RadioGroup
+            android:id="@+id/rg_game_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <RadioButton
+                android:id="@+id/rb_mode_normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="普通"
+                android:textColor="@color/colorWhite" />
+
+            <RadioButton
+                android:id="@+id/rb_mode_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="计时"
+                android:textColor="@color/colorWhite" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cb_highlight_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/v_margin_m"
+        android:layout_marginTop="@dimen/v_margin_m"
+        android:textColor="@color/colorWhite"
+        android:text="高亮显示未完成的板块（图片）" />
+    <CheckBox
+        android:id="@+id/cb_sound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/v_margin_m"
+        android:layout_marginTop="@dimen/v_margin_m"
+        android:textColor="@color/colorWhite"
+        android:text="音效" />
+    <CheckBox
+        android:id="@+id/cb_save_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/v_margin_m"
+        android:layout_marginTop="@dimen/v_margin_m"
+        android:textColor="@color/colorWhite"
+        android:text="退出时自动保存上一次的进度" />
+    <CheckBox
+        android:id="@+id/cb_question_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/v_margin_m"
+        android:layout_marginTop="@dimen/v_margin_m"
+        android:textColor="@color/colorWhite"
+        android:text="退出游戏时确认" />
+    <Button
+        android:id="@+id/bn_custom_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:background="@null"
+        android:text="更换拼图背景" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/v_margin"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/bn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@null"
+            android:text="确定"
+            android:textSize="16sp"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/bn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@null"
+            android:text="取消"
+            android:textSize="16sp"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+</LinearLayout>

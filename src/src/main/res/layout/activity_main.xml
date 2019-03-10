@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhidi.flypuzzle.activity.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_above="@+id/ll_menu"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:paddingRight="@dimen/spacing">
+            <ImageView
+                android:id="@+id/iv_preview"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@color/colorWhite"
+                android:padding="1px"/>
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/iv_preview"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_step"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorWhite"
+                    android:text="步数：0"/>
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorWhite"
+                    android:text="用时：00:00"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_scores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:text="@string/ranking"/>
+        </RelativeLayout>
+        <FrameLayout
+            android:id="@+id/fl_main"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/spacing"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorWhite"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bn_start"
+            style="@style/Button"
+            android:text="@string/restart" />
+
+        <Button
+            android:id="@+id/bn_set"
+            style="@style/Button"
+            android:text="@string/settings" />
+        <Button
+            android:id="@+id/bn_save"
+            style="@style/Button"
+            android:text="@string/save" />
+        <Button
+            android:id="@+id/bn_about"
+            style="@style/Button"
+            android:text="@string/about" />
+
+        <Button
+            android:id="@+id/bn_exit"
+            style="@style/Button"
+            android:text="@string/exit" />
+    </LinearLayout>
+</RelativeLayout>
